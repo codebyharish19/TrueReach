@@ -1,5 +1,5 @@
 "use client";
-
+export const dynamic = 'force-dynamic';
 import { useState, useCallback } from 'react';
 import { Upload, Download, FileText, CheckCircle, AlertTriangle, X, Search, ArrowUpDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
