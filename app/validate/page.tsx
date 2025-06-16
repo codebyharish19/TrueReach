@@ -1,7 +1,7 @@
 "use client";
 export const dynamic = 'force-dynamic';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect,Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Check, X, AlertTriangle, Mail, Shield, Globe, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -228,7 +228,8 @@ export default function ValidatePage() {
   };
 
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <Suspense>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
@@ -344,5 +345,6 @@ export default function ValidatePage() {
         )}
       </div>
     </div>
+    </Suspense>
   );
 }
