@@ -36,7 +36,7 @@ interface ValidationResult {
   };
 }
 
-export default function ValidatePage() {
+ function ValidatePage() {
   const searchParams = useSearchParams();
   const [email, setEmail] = useState('');
   const [isValidating, setIsValidating] = useState(false);
@@ -347,4 +347,13 @@ export default function ValidatePage() {
     </div>
     </Suspense>
   );
+}
+
+export default function Searchbar() {
+  return (
+    // You could have a loading skeleton as the `fallback` too
+    <Suspense>
+      <ValidatePage/>
+    </Suspense>
+  )
 }
